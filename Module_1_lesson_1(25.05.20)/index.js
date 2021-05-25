@@ -1,9 +1,22 @@
+
+// function sum() {
+//     return 2 + 3;
+// }
+
+// let result = sum();
+
+// console.log(result)
+
+
+
 // Ошибки в консоли
 
 // const name;
 
 // console.log(age);
 // let age;
+
+// console.log('HELLO WORLSd')
 
 // Определение типа значения, оператор typeof
 // Валидация форм
@@ -14,19 +27,38 @@
 // const error = null;
 // let quantity;
 
+// console.log(typeof productName);
+// console.log(typeof pricePerItem);
+// console.log(typeof isOnSale);
+// console.log(typeof error);
+// console.log(typeof quantity);
+
 // Шаблонные строки
 // // Написать фразу с помощью шаблонных строк Здравствуйте, меня зовут А, мне Б лет и мне нравится Ц, где А, Б, Ц - переменные вставленные в строку.
+
 
 // const name = 'Манго';
 // const age = 5;
 // const hobby = 'плавать';
-// const message = '';
+// const message = `Здравствуйте, меня зовут ${name} мне ${age} лет и мне нравиться ${hobby}`;
 
 // console.log(message);
 
 // Prompt и confirm
 
 // Спросить у пользователя имя, почту,  телефон и показать в консоле фразу "Пользоваель под именем ____ использует ____ почту и ____ телелефон"
+// 1) Спросить имя юзера (prompt)
+// 2) Спросить почту (prompt)
+// 3) Спросить телефон (prompt)
+// 4) Составить финальную фразу (template string)
+
+// const userName = prompt('Enter your name');
+// const email = prompt('Enter your email');
+// const phoneNumber = prompt('Enter phon number');
+
+// const message = `Пользоваель под именем ${userName} использует ${email} почту и ${phoneNumber} телелефон`;
+// console.log(message);
+
 
 // let userName, email, phone;
 
@@ -80,15 +112,16 @@
 // console.log(typeof result);
 
 
-// // Вывести на экран сумму: количество яблок + количество винограда.
-
-// const apples = 47;
-// const grapes = 135;
-// const total = ;
-
-
 // Обьект Math
 // // Определить площадь круга с радиусом 10см (ПR(2)). Math.pow(a, b) - возведение в степень
+
+// const rad = 10;
+// const PI = Math.PI;
+// const powRad = Math.pow(rad, 2);
+// const result = PI * powRad;
+// console.log('result', result)
+
+
 
 // const rad = 10;
 // const area = Math.PI * Math.pow(rad, 2);
@@ -100,7 +133,7 @@
 // // Каким будет результат этих выражений?
 
 // console.log(5 > 4);
-// console.log(10 >= "7");
+// console.log(10 >= "7"); 
 // console.log("2" > "12");
 // console.log("2" < "12");
 // console.log("4" == 4);
@@ -118,9 +151,15 @@
 // Посчитать суму товаров в козине магазина
 // Нужно ввести цену 3-х товаров и посчитать их суму
 
-// const phonePrice
-// const tvPrice
-// const playStationPrice
+// const phonePrice = Number(prompt('Enter phone price')); // 10
+// const tvPrice = +prompt('Enter tv price'); // 12
+// const playStationPrice = Number(prompt('Enter ps price')) // 8
+
+// const result = phonePrice + tvPrice + playStationPrice;
+
+// console.log(result); // 30
+
+
 
 
 
