@@ -1,6 +1,5 @@
  Операции с масивами (замена, добавление)
  Перебор масива for, for of
- Сортировка масива циклом
  Передача по сылке и по значению
  split join indexOf includes
  push pop shift unshift
