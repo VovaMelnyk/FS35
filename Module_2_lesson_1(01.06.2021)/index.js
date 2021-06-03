@@ -173,22 +173,22 @@ const roles = ["user", "tester", "admin"];
 
 // 4) Проверить является ли строка палиндромом
 
-const str = "довод";
-const newString = "Hello";
+// const str = "довод";
+// const newString = "Hello";
 
 // 1) Сделать со строки масив
 // 2) Перевевнуть масив наоборот
 // 3) С масива сделать строку
 // 4) Сравнить 2 строки
 
-const array = str.split("");
-array.reverse();
-const reverseString = array.join("");
-console.log(reverseString);
+// const array = str.split("");
+// array.reverse();
+// const reverseString = array.join("");
+// console.log(reverseString);
 
-const reverseStringWithChaining = newString.split("").reverse().join("");
+// const reverseStringWithChaining = newString.split("").reverse().join("");
 
-console.log(newString === reverseStringWithChaining);
+// console.log(newString === reverseStringWithChaining);
 
 // const strSplit = str.split("").reverse().join("");
 // console.log(strSplit);
@@ -202,5 +202,3 @@ console.log(newString === reverseStringWithChaining);
 
 // 6) Написать програму которая спрашивает у пользователя цены, он вписывает их через prompt
 // пока не нажмет отмену. После этого посчитать суму чисел и используя alert вывести результат на экран
-
-// includes
