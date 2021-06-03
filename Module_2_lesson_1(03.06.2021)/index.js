@@ -217,7 +217,7 @@
 // removeCourse(name) - удаляет курс из коллекции
 // updateCourse(oldName, newName)- изменяет имя на новое
 
-const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
 
 // function addCourse(course) {
 //   if (courses.includes(course)) {
@@ -227,38 +227,38 @@ const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
 //   courses.push(course);
 // }
 
-const addCourse = (course) => {
-  if (courses.includes(course)) {
-    console.log("У вас уже есть такое курс");
-    return;
-  }
-  courses.push(course);
-};
+// const addCourse = (course) => {
+//   if (courses.includes(course)) {
+//     console.log("У вас уже есть такое курс");
+//     return;
+//   }
+//   courses.push(course);
+// };
 
-const removeCourse = (course) => {
-  const courseIndex = courses.indexOf(course);
-  if (courseIndex === -1) {
-    console.log("Курс с таким имененем не найден");
-    return;
-  }
-  courses.splice(courseIndex, 1);
-};
+// const removeCourse = (course) => {
+//   const courseIndex = courses.indexOf(course);
+//   if (courseIndex === -1) {
+//     console.log("Курс с таким имененем не найден");
+//     return;
+//   }
+//   courses.splice(courseIndex, 1);
+// };
 
-const updateCourse = (courseToDelete, courseToAdd) => {
-  const index = courses.indexOf(courseToDelete);
-  courses.splice(index, 1, courseToAdd);
-  //   courses[index] = courseToAdd;
-  //   removeCourse(courseToDelete);
-  //   addCourse(courseToAdd);
-};
+// const updateCourse = (courseToDelete, courseToAdd) => {
+//   const index = courses.indexOf(courseToDelete);
+//   courses.splice(index, 1, courseToAdd);
+//   //   courses[index] = courseToAdd;
+//   //   removeCourse(courseToDelete);
+//   //   addCourse(courseToAdd);
+// };
 
 // addCourse("Express"); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
 // addCourse("CSS"); // 'У вас уже есть такое курс'
-removeCourse("React"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
-removeCourse("Vue"); // 'Курс с таким имененем не найден'
-updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+// removeCourse("React"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// removeCourse("Vue"); // 'Курс с таким имененем не найден'
+// updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
 
-console.log(courses);
+// console.log(courses);
 
 // 7) Написать ф-ю которая принимает строку в rem и возвращает ответ в пикселях
 // toPX('2rem') //32px
