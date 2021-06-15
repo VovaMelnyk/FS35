@@ -1,32 +1,49 @@
-// const printValue = function (value) {
-//     console.log(value);
-//   };
-  
-//   const prettyPrint = function (value) {
-//     console.log("Logging value: ", value);
-//   };
-  
-//   const repeat = function (n, action) {
-//     for (let i = 0; i < n; i += 1) {
-//       action(i);
-//     }
-//   };
-  
-//   // Передаем printValue как callback-функцию
-//   repeat(3, printValue);
-//   // 0
-//   // 1
-//   // 2
-  
+// {}
+
+// const printValue = function (value, word = "Hello") {
+//   console.log(`${word}:${value}`);
+// };
+
+// {printValue}
+
+// const prettyPrint = function (value) {
+//   console.log("Logging value: ", value);
+// };
+
+// const repeat = function (action, n) {
+//   // action = printValue
+//   //   console.log("action", action);
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//     // printValue(i)
+//   }
+// };
+
+// Передаем printValue как callback-функцию
+// repeat(printValue, 3);
+// 0
+// 1
+// 2
+
 //   // Передаем prettyPrint как callback-функцию
-//   repeat(3, prettyPrint);
-//   // Logging value: 0
-//   // Logging value: 1
-//   // Logging value: 2
-  
+// repeat(prettyPrint, 3);
+// Logging value: 0
+// Logging value: 1
+// Logging value: 2
 
+// function test() {
+//   console.log(`test`);
+// }
 
+// function showString(callback) {
+// }
 
+// const arr = [1, 2, 3];
+
+// const result = arr.map((el) => el * 2);
+// console.log(result);
+
+// showString(test);
 
 // // global: {}
 // let b = 10;
@@ -35,9 +52,58 @@
 //   console.log("b", b);
 // };
 
+// const a = {};
+// const b = new Object()
+// const c = new Array() // []
+
+// "use strict";
+
+// function showThis() {
+//   console.log(`this`, this);
+// }
+
+// const user = {
+//   age: 4,
+//   name: "Bob",
+//   showThis() {
+//     console.log(`this`, this);
+//   },
+// };
+
+// {}
+
+// function test() {
+//     // {}
+//   console.log(`a`, a);
+// }
+
+// // {test}
+
 // test();
 
 // const a = 4545;
+
+// user.showThis();
+
+// function test(string) {
+//   console.log(`arguments`, arguments);
+//   console.log(`${string}: ${this.name}`); // user
+// }
+
+// test("Hello");
+
+// test.call(user, "Hello");
+// test.apply(user, ["Hello"]);
+
+// showThis();
+
+// function test () {
+// test()
+// }
+
+// window.showThis();
+
+// console.log(Object.keys(user));
 
 // let user = {
 //   name: "User",
@@ -47,11 +113,26 @@
 //   },
 // };
 
+// // user.showThis();
+
+// const test = user.showThis;
+// test(); // window
+// user.showThis(); // user
+
+// user.showThis = function () {
+//   console.log(`New function`);
+// };
+
+// test();
+// user.showThis();
+
+// showThis();
+
+// console.log(`test`, test);
+
 //  const showArrowThis = () => {
 //       console.log("nested this", this);
 //     };
-
-// user.showThis();
 
 // const test = user.showThis;
 
@@ -65,6 +146,28 @@
 // greet(name) - коллбек принимающий имя и логирующий в консоль строку "Привет" + name
 
 // function letMeSeeYourName(callback) {
+//   const name = prompt("Enter name");
+//   callback(name);
+// }
+
+// function greet(name) {
+//   console.log(`Hello, ${name}`);
+// }
+
+// function greetWithAlert(name) {
+//   alert(name);
+// }
+
+// function universalGreet(name) {
+//   console.log(`Hello, ${name}`);
+//   alert(name);
+// }
+
+// letMeSeeYourName(greet);
+// letMeSeeYourName(greetWithAlert);
+// letMeSeeYourName(universalGreet);
+
+// function letMeSeeYourName(callback) {
 //   const name = prompt("Введите ваше имя: ", '');
 //   callback(name);
 // }
@@ -75,10 +178,30 @@
 
 // letMeSeeYourName(greet);
 
+// usestrict
+
 // // Напишите две функции:
 
 // makeProduct(name, price, callback) - принимает имя и цену товара, а также колбек. Функция создаёт обьект товара, добавляя ему уникальный идентификатор в свойство id и вызывает колбек передавая ему созданный обьект.
 // showProduct(product) - коллбек принимающий обьект продукта и логирующий его в консоль
+
+const makeProduct = (name, price, callback) => {
+  const product = {
+    name,
+    price,
+    id: Date.now(),
+  };
+
+  callback(product);
+};
+
+const logger = (product) => {
+  console.log(product);
+};
+
+const messager = (product) => {
+  console.log("Product created", product);
+};
 
 // function makeProduct(name, price, callback) {
 //   const product = {
@@ -94,7 +217,8 @@
 //   console.log(product);
 // }
 
-// makeProduct("Холодильник", 10000, showProduct);
+makeProduct("Холодильник", 10000, logger);
+makeProduct('TV', 120000, messager)
 
 // Исправьте ошибки чтобы код работал.
 
