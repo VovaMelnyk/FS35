@@ -185,23 +185,23 @@
 // makeProduct(name, price, callback) - принимает имя и цену товара, а также колбек. Функция создаёт обьект товара, добавляя ему уникальный идентификатор в свойство id и вызывает колбек передавая ему созданный обьект.
 // showProduct(product) - коллбек принимающий обьект продукта и логирующий его в консоль
 
-const makeProduct = (name, price, callback) => {
-  const product = {
-    name,
-    price,
-    id: Date.now(),
-  };
+// const makeProduct = (name, price, callback) => {
+//   const product = {
+//     name,
+//     price,
+//     id: Date.now(),
+//   };
 
-  callback(product);
-};
+//   callback(product);
+// };
 
-const logger = (product) => {
-  console.log(product);
-};
+// const logger = (product) => {
+//   console.log(product);
+// };
 
-const messager = (product) => {
-  console.log("Product created", product);
-};
+// const messager = (product) => {
+//   console.log("Product created", product);
+// };
 
 // function makeProduct(name, price, callback) {
 //   const product = {
@@ -217,8 +217,8 @@ const messager = (product) => {
 //   console.log(product);
 // }
 
-makeProduct("Холодильник", 10000, logger);
-makeProduct('TV', 120000, messager)
+// makeProduct("Холодильник", 10000, logger);
+// makeProduct('TV', 120000, messager)
 
 // Исправьте ошибки чтобы код работал.
 
