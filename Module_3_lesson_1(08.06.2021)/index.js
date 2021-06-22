@@ -21,21 +21,21 @@
 // console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
 
 // Можем ли мы использовать this вместо hotel в этом примере из конспекта?
-const hotel = {
-  name: "Resort Hotel",
-  stars: 5,
-  capacity: 100,
-  //   showName() {
-  //     console.log(`this`, this);
-  //     // console.log(`name =`, this.name);
-  //   },
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+//   //   showName() {
+//   //     console.log(`this`, this);
+//   //     // console.log(`name =`, this.name);
+//   //   },
 
-  //     showName: function () {
-  //       // this = hotel
-  //         // clg
-  //     console.log(`this`, this);
-  //   },
-};
+//   //     showName: function () {
+//   //       // this = hotel
+//   //         // clg
+//   //     console.log(`this`, this);
+//   //   },
+// };
 
 // hotel.showName();
 
@@ -242,7 +242,7 @@ const account = {
    */
   createTransaction(amount, type) {
     return {
-      id: this.transactions.length,
+      id: this.transactions.length + 1,
       amount,
       type,
     };
@@ -254,7 +254,11 @@ const account = {
    * Вызывает createTransaction для создания объекта транзакции
    * после чего добавляет его в историю транзакций
    */
-  deposit(amount) {},
+  deposit(amount) {
+    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
+    this.balance += amount;
+    return 'Деньги зачислены :)'
+  },
 
   /*
    * Метод отвечающий за снятие суммы с баланса.
@@ -265,24 +269,63 @@ const account = {
    * Если amount больше чем текущий баланс, выводи сообщение
    * о том, что снятие такой суммы не возможно, недостаточно средств.
    */
-  withdraw(amount) {},
+  withdraw(amount) {
+    this.transactions.push(this.createTransaction(amount, Transaction.WITHDRAW));
+    if (amount > this.balance) {
+      return 'Cнятие такой суммы не возможно, недостаточно средств'
+    }
+    this.balance -= amount;
+    return 'Деньги сняты. Не забудьте забрать :)'
+  },
 
   /*
    * Метод возвращает текущий баланс
    */
-  getBalance() {},
+  getBalance () {
+    return this.balance
+  },
 
   /*
    * Метод ищет и возвращает объект транзации по id
    */
-  getTransactionDetails(id) {},
+  getTransactionDetails(id) {
+    for (const transaction of this.transactions){
+      if (Object.values(transaction).includes(id)) {
+        return transaction;
+      }
+    }
+    return `Транзакции с номером ${id} не существует`;
+  },
 
   /*
    * Метод возвращает количество средств
    * определенного типа транзакции из всей истории транзакций
    */
-  getTransactionTotal(type) {},
+  getTransactionTotal(type) {
+    transactionTotal = 0;
+    for (const transaction of this.transactions){
+      if (Object.values(transaction).includes(type)) {
+        transactionTotal += transaction.amount;
+      }
+    }
+    return transactionTotal;
+  },
 };
 
 console.log(`account`, account);
-console.log("result", account.createTransaction(100, Transaction.DEPOSIT));
+console.log("createTransaction", account.createTransaction(100, Transaction.DEPOSIT));
+console.log(`balance:`, account.getBalance());
+console.log('TransactionDetails(id) :>> ', account.getTransactionDetails(1));
+console.log(`deposit:`, account.deposit(200));
+console.log(`balance:`, account.getBalance());
+console.log('TransactionDetails(id) :>> ', account.getTransactionDetails(123));
+account.withdraw(100);
+console.log(`balance:`, account.getBalance());
+console.log('TransactionDetails(id) :>> ', account.getTransactionDetails(2));
+console.log(`withdraw:`, account.withdraw(100));
+console.log(`balance:`, account.getBalance());
+account.deposit(1000);
+console.log('TransactionDetails(id) :>> ', account.getTransactionDetails(3));
+console.log("TransactionTotal (DEPOSIT)", account.getTransactionTotal(Transaction.DEPOSIT));
+console.log("TransactionTotal (WITHDRAW)", account.getTransactionTotal(Transaction.WITHDRAW));
+console.log(`balance:`, account.getBalance());
