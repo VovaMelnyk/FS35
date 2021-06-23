@@ -71,15 +71,15 @@ function Person(obj) {
 
 // console.log(`Person`, Person.prototype);
 
-// Person.prototype.greeting = function () {
-//   console.log(`Привет я ${this.firstName} ${this.lastName}`);
-// };
+Person.prototype.greeting = function () {
+  console.log(`Привет я ${this.firstName} ${this.lastName}`);
+};
 
-// Person.prototype.bio = function () {
-//   console.log(
-//     `Привет ${this.firstName} мне ${this.age} лет. Мне нравится ${this.interests}`
-//   );
-// };
+Person.prototype.bio = function () {
+  console.log(
+    `Привет ${this.firstName} мне ${this.age} лет. Мне нравится ${this.interests}`
+  );
+};
 
 const user = new Person({
   firstName: "Bob",
@@ -125,33 +125,31 @@ console.log(`arr`, arr);
 // console.log(`user2`, user2);
 // user2.bio();
 
-// function Teacher(obj) {
-//   const { subject } = obj;
-//   // this = {}
-//   Person.call(this, obj);
-//   this.subject = subject;
-// }
+function Teacher(obj) {
+  const { subject } = obj;
+  // this = {}
+  Person.call(this, obj);
+  this.subject = subject;
+}
 
-// Teacher.prototype = Object.create(Person.prototype);
-// Teacher.prototype.constructor = Teacher;
+Teacher.prototype = Object.create(Person.prototype);
+Teacher.prototype.constructor = Teacher;
 
-// Teacher.prototype.greeting = function () {
-//   console.log("I am teacher method");
-// };
+Teacher.prototype.greeting = function () {
+  console.log("I am teacher method");
+};
 
-// const teacher1 = new Teacher({
-//   firstName: "Bob",
-//   lastName: "Dou",
-//   age: 45,
-//   gender: "male",
-//   interests: "football",
-//   subject: "Math",
-// // });
+const teacher1 = new Teacher({
+  firstName: "Bob",
+  lastName: "Dou",
+  age: 45,
+  gender: "male",
+  interests: "football",
+  subject: "Math",
+});
 
-// console.log(`teacher1`, teacher1);
-// teacher1.greeting();
-
-
+console.log(`teacher1`, teacher1);
+teacher1.greeting();
 
 // 2) Вынести методы из обекта person в __proto__
 
