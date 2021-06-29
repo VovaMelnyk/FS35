@@ -352,6 +352,38 @@ class Person {
 // 5)  Напиши клас Notes который управляет коллекцией заметок в свойстве items.
 // Заметка это объект со свойствами text и priority.
 // Добавь конструктору статическое свойство Priority, в котором будет храниться объект с приоритетами.
+<<<<<<< Updated upstream
+=======
+class Notes {
+  static Priority = {
+    LOW: 'low',
+    NORMAL: 'normal',
+    HIGH: 'high'
+  }
+  constructor(items) {  
+    this.items = items;
+  }
+  addNote(item) {
+    this.items.push(item);
+  }
+  removeNote(item) {
+    for (const element of this.items) {
+      if (Object.values(element).includes(item)) {
+       this.items.splice(this.items.indexOf(element), 1)
+     }
+   }
+  }
+  updateNote(item, priority) {
+    for (const element of this.items) {
+      
+      if (Object.values(element).includes(item)) {
+        element.priority = priority;
+      };        
+   }
+  }
+  
+}
+>>>>>>> Stashed changes
 // {
 //     LOW: 'low',
 //     NORMAL: 'normal',
@@ -360,7 +392,12 @@ class Person {
 
 // let id = Date.now();
 
+<<<<<<< Updated upstream
 // const myNotes = new Notes([]);
+=======
+
+const myNotes = new Notes([]);
+>>>>>>> Stashed changes
 
 // myNotes.addNote({  text: 'Моя первая заметка', priority: Notes.Priority.LOW })
 // console.log(myNotes.items);
@@ -373,6 +410,7 @@ class Person {
 
 // myNotes.updateNote('Моя вторая заметка', Notes.Priority.HIGH);
 // console.log(myNotes.items);
+
 
 // class Guest {
 //   // Собственные свойства класса размещаем в конструкторе
