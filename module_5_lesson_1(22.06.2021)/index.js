@@ -58,98 +58,98 @@
 //   // return this
 // }
 
-function Person(obj) {
-  //   this = {}
-  const { firstName, lastName, age, gender, interests } = obj;
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.age = age;
-  this.gender = gender;
-  this.interests = interests;
-  // return this
-}
+// function Person(obj) {
+//   //   this = {}
+//   const { firstName, lastName, age, gender, interests } = obj;
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.age = age;
+//   this.gender = gender;
+//   this.interests = interests;
+//   // return this
+// }
 
-// console.log(`Person`, Person.prototype);
+// // console.log(`Person`, Person.prototype);
 
-Person.prototype.greeting = function () {
-  console.log(`Привет я ${this.firstName} ${this.lastName}`);
-};
+// Person.prototype.greeting = function () {
+//   console.log(`Привет я ${this.firstName} ${this.lastName}`);
+// };
 
-Person.prototype.bio = function () {
-  console.log(
-    `Привет ${this.firstName} мне ${this.age} лет. Мне нравится ${this.interests}`
-  );
-};
+// Person.prototype.bio = function () {
+//   console.log(
+//     `Привет ${this.firstName} мне ${this.age} лет. Мне нравится ${this.interests}`
+//   );
+// };
 
-const user = new Person({
-  firstName: "Bob",
-  lastName: "Dou",
-  age: 21,
-  gender: "male",
-  interests: "football",
-});
-console.log(Person.prototype);
-
-const user2 = new Person({
-  firstName: "Jack",
-  lastName: "Dou",
-  age: 35,
-  gender: "male",
-  interests: "basketball",
-});
-
-let arr = [];
-console.log(`arr`, arr);
-
-// const user = new Person("Bob", "Dou", 21, "male", "football");
-
-// const result = Person({
+// const user = new Person({
 //   firstName: "Bob",
 //   lastName: "Dou",
 //   age: 21,
 //   gender: "male",
 //   interests: "football",
 // });
+// console.log(Person.prototype);
 
-// console.log(`result`, result);
+// const user2 = new Person({
+//   firstName: "Jack",
+//   lastName: "Dou",
+//   age: 35,
+//   gender: "male",
+//   interests: "basketball",
+// });
 
-// const user2 = {}
-// user2.firstName = 'Jack'
-// user2.lastName = 'Dou'
-// user2.age = 34
+// let arr = [];
+// console.log(`arr`, arr);
 
-// console.log(`user`, user);
-// user.bio();
-// user.greeting();
+// // const user = new Person("Bob", "Dou", 21, "male", "football");
 
-// console.log(`user2`, user2);
-// user2.bio();
+// // const result = Person({
+// //   firstName: "Bob",
+// //   lastName: "Dou",
+// //   age: 21,
+// //   gender: "male",
+// //   interests: "football",
+// // });
 
-function Teacher(obj) {
-  const { subject } = obj;
-  // this = {}
-  Person.call(this, obj);
-  this.subject = subject;
-}
+// // console.log(`result`, result);
 
-Teacher.prototype = Object.create(Person.prototype);
-Teacher.prototype.constructor = Teacher;
+// // const user2 = {}
+// // user2.firstName = 'Jack'
+// // user2.lastName = 'Dou'
+// // user2.age = 34
 
-Teacher.prototype.greeting = function () {
-  console.log("I am teacher method");
-};
+// // console.log(`user`, user);
+// // user.bio();
+// // user.greeting();
 
-const teacher1 = new Teacher({
-  firstName: "Bob",
-  lastName: "Dou",
-  age: 45,
-  gender: "male",
-  interests: "football",
-  subject: "Math",
-});
+// // console.log(`user2`, user2);
+// // user2.bio();
 
-console.log(`teacher1`, teacher1);
-teacher1.greeting();
+// function Teacher(obj) {
+//   const { subject } = obj;
+//   // this = {}
+//   Person.call(this, obj);
+//   this.subject = subject;
+// }
+
+// Teacher.prototype = Object.create(Person.prototype);
+// Teacher.prototype.constructor = Teacher;
+
+// Teacher.prototype.greeting = function () {
+//   console.log("I am teacher method");
+// };
+
+// const teacher1 = new Teacher({
+//   firstName: "Bob",
+//   lastName: "Dou",
+//   age: 45,
+//   gender: "male",
+//   interests: "football",
+//   subject: "Math",
+// });
+
+// console.log(`teacher1`, teacher1);
+// teacher1.greeting();
 
 // 2) Вынести методы из обекта person в __proto__
 
