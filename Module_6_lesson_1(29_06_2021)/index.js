@@ -185,6 +185,24 @@ const scientists = [
 
 // console.log(`findResult`, findResult);
 
+// const findDateOfBirth = (name, lastName, arr) => {
+//   const result = arr.find(
+//     (scientist) => scientist.name === name && scientist.surname === lastName
+//   );
+//   // return result ? result.born : "Такой юзер не найден";
+//   // return result?.born;
+//   return result?.born ?? "Такой юзер не найден";
+// };
+
+// const result = scientists.every(
+//   (scientist) =>
+//     scientist.born >= 1800 && scientist.born < 1900 && scientist.dead > 1800
+// );
+
+// console.log(`result`, result);
+
+// console.log(findDateOfBirth("Steve", "Einstein", scientists));
+
 //  получить массив ученых которые родились в 19 ст
 //  Посчитать суму лет сколько прожили все ученные
 //  Отсортировать по алфавиту
