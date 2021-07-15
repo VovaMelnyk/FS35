@@ -186,6 +186,20 @@ const bordersCountries = (countries, borders) =>
     .map((country) => country.name);
 
 console.log(`bordersCountries`, bordersCountries(countriesInEurope, borders));
+
+//находим общую площадь всех стран
+//находим площадь нужной страны , делим на общую площадь и умнажаем на 100
+const totalArea = (arr) => arr.reduce((acc, el) => acc + el.area, 0);
+// console.log(totalArea(arr));
+
+const findCountryArea = (countryName, arr) => {
+  const countryNameDescription = arr.find(country => country.name === countryName);
+  return countryNameDescription.area;
+}
+// console.log(findCountryArea('Switzerland', arr));
+
+const countryAreaPercent = (findCountryArea('Austria', arr) / totalArea(arr)) * 100;
+console.log(countryAreaPercent);
 // function findBorders(countryName, countryArray) {
 //   const countryCode = countryArray.find(
 //     (el) => el.name === countryName
