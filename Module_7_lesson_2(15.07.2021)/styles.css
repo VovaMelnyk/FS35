@@ -1,0 +1,190 @@
+/* start calculator */
+/* * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 300px;
+  background-color: grey;
+  margin: auto;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 10px;
+}
+#price {
+  margin-bottom: 10px;
+}
+
+.text-right {
+  text-align: right;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.amount {
+  background-color: blue;
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 0 5px;
+  border-radius: 3px;
+  color: #fff;
+} */
+/* end calclator */
+
+/* start scroll */
+/* html {
+  box-sizing: border-box;
+  background: #eeeeee;
+  font-family: "helvetica neue";
+  font-size: 20px;
+  font-weight: 200;
+}
+body {
+  margin: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.site-wrap {
+  max-width: 700px;
+  margin: 70px auto;
+  background: white;
+  padding: 40px;
+  text-align: justify;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(0.98);
+  transition: transform 0.5s;
+}
+
+.fixed-nav + .site-wrap {
+  transform: scale(1);
+}
+
+.header {
+  text-align: center;
+  height: 50vh;
+  background: url(http://wes.io/iEgP/wow-so-deep.jpg) bottom center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-size: 7vw;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav {
+  background: black;
+  top: 0;
+  width: 100%;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+.fixed-nav {
+  position: fixed;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 0;
+  overflow: hidden;
+  background: white;
+  transition: all 0.5s;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  color: white;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.logo a {
+  color: black;
+}
+
+.fixed-nav .logo {
+  max-width: 500px;
+} */
+
+/* end scroll */
+
+/* start buttons */
+
+/* .btn {
+  position: absolute;
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: none;
+  top: 30px;
+  left: 50%;
+  color: #fff;
+  background-color: blue;
+  outline: none;
+  text-transform: capitalize;
+  font-size: 30px;
+  transition: 0.3s ease all;
+} */
+
+/* .win {
+  background-color: green;
+}
+
+.fail {
+  background-color: red;
+}
+
+.danger {
+  background-color: brown;
+}
+
+.attention {
+  background-color: yellowgreen;
+} */
+
+/* end buttons */
+
+/* .red {
+  background-color: red;
+} */
+
