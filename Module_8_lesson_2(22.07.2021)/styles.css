@@ -32,7 +32,7 @@ a {
 
 /* ////////////////////////////////// */
 
-/* p {
+p {
   line-height: 20px;
 }
 .container {
@@ -52,4 +52,4 @@ a {
 .animated-text.visible {
   opacity: 1;
   transform: translateX(0);
-} */
+}

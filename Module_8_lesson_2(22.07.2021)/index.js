@@ -2,11 +2,28 @@
 
 // Оптимизировать роботу scroll и resize
 
-// const resize = function () {
+// function scrollTrack() {
+//   console.log("scroll");
+// }
+
+// function resizeTrack() {
 //   console.log("resize");
-// };
-// const throttledResize = _.throttle(resize, 300);
-// window.addEventListener("resize", throttledResize);
+// }
+
+// const scrollThrottled = _.throttle(scrollTrack, 500); // create new function
+
+// addEventListener("scroll", scrollThrottled);
+// addEventListener("scroll", _.throttle(scrollTrack, 500));
+
+// addEventListener("resize", _.throttle(resizeTrack, 700));
+
+// function trackInputEvent() {
+//   console.log("Send data to server");
+// }
+
+// const input = document.querySelector("input");
+
+// input.addEventListener("input", _.debounce(trackInputEvent, 1000));
 
 // Оптимизировать роботу события input
 
@@ -22,6 +39,22 @@
 
 // Написать сайт на котором при загрузке проигрвывается видео. Как только видео пропадает
 // из области видимостя более чем на 60% - ставить его на паузу
+
+// const videoPlayer = document.querySelector("video");
+
+// const handleVideoObserver = () => {
+//   if (!videoPlayer.paused) {
+//     videoPlayer.pause();
+//   } else {
+//     videoPlayer.play();
+//   }
+// };
+
+// const watcher = new IntersectionObserver(handleVideoObserver, {
+//   threshold: 0.5,
+// });
+
+// watcher.observe(videoPlayer);
 
 // const video = document.querySelector("video");
 
@@ -62,6 +95,23 @@
 //   .forEach((p) => observer.observe(p));
 
 // Написать код который запускает анимацию когда юзер доскроливает до конкретного контента
+
+// const targetElement = document.querySelector(".animated-text");
+
+// const handleObserver = (entries) => {
+//   console.log("entries", entries);
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add("visible");
+//     } else {
+//       entry.target.classList.remove("visible");
+//     }
+//   });
+// };
+
+// const watcher = new IntersectionObserver(handleObserver, { threshold: 1 });
+
+// watcher.observe(targetElement);
 
 // const target = document.querySelector(".animated-text");
 
