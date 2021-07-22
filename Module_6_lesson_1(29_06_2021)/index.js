@@ -9,7 +9,8 @@
 
 // В чем же принципиальная разница между forEach & map?
 
-// const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 
 // const result = numbers.map((number) => number * 2);
 
@@ -185,6 +186,13 @@ const scientists = [
 
 // console.log(`findResult`, findResult);
 
+
+const birthday = scientists.filter(scientist => scientist.id === 1).map((scientist)=>`${scientist.name} ${scientist.surname} was born at ${scientist.born}`)
+console.log(birthday);
+
+const every = scientists.every(scientist => scientist.dead >= 1800 && scientist.dead < 1900)
+console.log(every);
+
 // const findDateOfBirth = (name, lastName, arr) => {
 //   const result = arr.find(
 //     (scientist) => scientist.name === name && scientist.surname === lastName
@@ -202,6 +210,7 @@ const scientists = [
 // console.log(`result`, result);
 
 // console.log(findDateOfBirth("Steve", "Einstein", scientists));
+
 
 //  получить массив ученых которые родились в 19 ст
 //  Посчитать суму лет сколько прожили все ученные

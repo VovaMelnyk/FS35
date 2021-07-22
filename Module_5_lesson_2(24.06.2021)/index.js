@@ -16,6 +16,34 @@
 //   );
 // };
 
+ 
+// class Person {
+//   //   firstName;
+//   //   lastName;
+//   //   age;
+//   //   gender;
+//   //   interest;
+
+//   constructor({ firstName, lastName, age, gender, interest }) {
+//     // 1
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.gender = gender;
+//     this.interest = interest;
+//   }
+
+//   greeting() {
+//     console.log(`Привет я ${this.firstName} ${this.lastName}`);
+//   }
+
+//   bio() {
+//     console.log(
+//       `Привет ${this.firstName} мне ${this.age} лет. Мне нравиться ${this.interest}`
+//     );
+//   }
+// }
+
 class Person {
   //   firstName;
   //   lastName;
@@ -42,6 +70,7 @@ class Person {
     );
   }
 }
+ 
 
 // const user = new Person({
 //   firstName: "Роман",
@@ -352,6 +381,46 @@ class Person {
 // 5)  Напиши клас Notes который управляет коллекцией заметок в свойстве items.
 // Заметка это объект со свойствами text и priority.
 // Добавь конструктору статическое свойство Priority, в котором будет храниться объект с приоритетами.
+
+
+
+
+class Notes {
+  static Priority = {
+    LOW: 'low',
+    NORMAL: 'normal',
+    HIGH: 'high'
+  }
+  constructor(items) {  
+    this.items = items;
+  }
+  addNote(item) {
+    this.items.push(item);
+  }
+  removeNote(item) {
+    for (const element of this.items) {
+      if (Object.values(element).includes(item)) {
+       this.items.splice(this.items.indexOf(element), 1)
+     }
+   }
+  }
+  updateNote(item, priority) {
+    for (const element of this.items) {
+
+      if (Object.values(element).includes(item)) {
+        element.text = item;
+
+        if (Object.values(element).includes(item)) {
+
+          element.priority = priority;
+        };
+      }
+    }
+
+  }
+  
+}
+
 // {
 //     LOW: 'low',
 //     NORMAL: 'normal',
@@ -360,7 +429,25 @@ class Person {
 
 // let id = Date.now();
 
+const myNotes = new Notes([]);
+
+myNotes.addNote({  text: 'Моя первая заметка', priority: Notes.Priority.LOW })
+console.log(myNotes.items);
+
+myNotes.addNote({ text: 'Моя вторая заметка', priority: Notes.Priority.NORMAL })
+console.log(myNotes.items);
+
+myNotes.removeNote('Моя первая заметка');
+console.log(myNotes.items);
+
+myNotes.updateNote('Моя вторая заметка', Notes.Priority.HIGH);
+console.log(myNotes.items);
+
 // const myNotes = new Notes([]);
+
+
+const myNotes = new Notes([]);
+
 
 // myNotes.addNote({  text: 'Моя первая заметка', priority: Notes.Priority.LOW })
 // console.log(myNotes.items);
@@ -373,6 +460,7 @@ class Person {
 
 // myNotes.updateNote('Моя вторая заметка', Notes.Priority.HIGH);
 // console.log(myNotes.items);
+
 
 // class Guest {
 //   // Собственные свойства класса размещаем в конструкторе

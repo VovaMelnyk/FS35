@@ -75,15 +75,16 @@
 // Добавьте «Рок-н-ролл» в конец.
 // Замените значение в середине на «Классика».
 // Удалите первый элемент и выведите его в консоль.
-// Вставьте «Рэп» и «Регги» в начало массива.
 
-// Массив по ходу выполнения операций:
-// Джаз, Блюз
-// Джаз, Блюз, Рок-н-ролл
-// Джаз, Классика, Рок-н-ролл
-// Классика, Рок-н-ролл
-// Рэп, Регги, Классика, Рок-н-ролл
+// // Вставьте «Рэп» и «Регги» в начало массива.
+// // Массив по ходу выполнения операций:
+// // Джаз, Блюз
+// // Джаз, Блюз, Рок-н-ролл
+// // Джаз, Классика, Рок-н-ролл
+// // Классика, Рок-н-ролл
+// // Рэп, Регги, Классика, Рок-н-ролл
 
+// console.log(styles);
 // const styles = ["Джаз", "Блюз"];
 // styles.push("Рок-н-ролл");
 // styles.splice(1, 1, "Классика");
@@ -92,7 +93,7 @@
 // console.log(deletedStyle);
 // console.log(styles);
 
-const roles = ["user", "tester", "admin"];
+// const roles = ["user", "tester", "admin"];
 // console.log(roles[1]);
 // console.log(roles[0]);
 // console.log(roles[5]);
@@ -123,9 +124,6 @@ const roles = ["user", "tester", "admin"];
 //Нумерация элементов должна начинаться с 1.
 // Например для первого элемента массива['Mango', 'Poly', 'Ajax'] с индексом 0 будет выведено
 // 1 - Mango, а для индекса 2 выведет 3 - Ajax.
-
-// const users = ["Mango", "Poly", "Ajax"]; // 3
-
 // for (let i = 0; i < users.length; i++) {
 //   console.log("index", i); // 0 // 1 // 2
 //   console.log("value", users[i]); // users[0] // users[1] // users[2]
@@ -137,8 +135,6 @@ const roles = ["user", "tester", "admin"];
 // }
 
 // 3) Напиши код который ищет самое маленькое число в массиве.
-
-// const numbers = [2, 17, 94, 1, 23, 37];
 
 // 1) Определить стартовое минимальное число
 // 2) Сравнить это число со всеми последующими елементами масива
@@ -176,13 +172,28 @@ const roles = ["user", "tester", "admin"];
 // const str = "довод";
 // const newString = "Hello";
 
-// 1) Сделать со строки масив
-// 2) Перевевнуть масив наоборот
-// 3) С масива сделать строку
-// 4) Сравнить 2 строки
+// const str = "Довод";
+// const toLowerCaseStr = str.toLocaleLowerCase()
 
+
+// const newString = "Hello";
+// // 0)  Превести строку к одному регистру
+// // 1) Сделать со строки масив
+// // 2) Перевевнуть масив наоборот
+// // 3) С масива сделать строку
+// // 4) Сравнить 2 строки
+// const aray = toLowerCaseStr.split('').reverse().join('')
+// aray.reverse();
+// aray.join('');
+// console.log(aray);
+// console.log(aray === toLowerCaseStr);
+//   toLowerCaseStr = toLowerCaseStr.split('')
+// toLowerCaseStr = toLowerCaseStr.reverse()
+// toLowerCaseStr = toLowerCaseStr.join()
+
+  
 // const array = str.split("");
-// array.reverse();
+
 // const reverseString = array.join("");
 // console.log(reverseString);
 
@@ -197,8 +208,40 @@ const roles = ["user", "tester", "admin"];
 // 5) Проверить если корзину пуста - показать фразу "Пустая корзина" иначе показать фразу "В корзине {х} товаров"
 // где х - это количество товаров в корзине
 
-// const basket = [];
 // const basket = ["Хлеб", "Молоко", "Конфеты"];
+
 
 // 6) Написать програму которая спрашивает у пользователя цены, он вписывает их через prompt
 // пока не нажмет отмену. После этого посчитать суму чисел и используя alert вывести результат на экран
+
+// let message = "Пустая корзина";
+//  const x = basket.length;
+// message = x !== 0 ? `В корзине ${x} товаров`:message
+// console.log(message);
+
+// 6) Написать програму которая спрашивает у пользователя цены, он вписывает их через prompt пока не нажмет отмену. После этого посчитать суму чисел и используя alert вывести результат на экран
+//1)Сделать массив цен
+// let coast = []
+// let total = 0
+// let usersNumber = prompt('add u number');
+// coast = coast.push(usersNumber)
+// //2)Спросить у пользователя цену, пока он не нажмёт отмену
+//3)Посчитать их сумму 
+//4)Вывести финальную сумму
+// includes
+
+// do {
+//   usersNumber = prompt('add number')
+//   coast.push(usersNumber)
+//   console.log(coast);
+// } while (usersNumber === null)
+
+// const string = 'hELLO';
+// const letters = string.split('')
+// let inversetString = ''
+
+// for (const letter of string) {
+//   const isInLowerCase = letter === letter.toLocaleLowerCase()
+//   inversetString += isInLowerCase ? letter.toLocaleUpperCase() : letter.toLowerCase()
+// }
+// console.log(inversetString);
