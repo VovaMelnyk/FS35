@@ -41,3 +41,12 @@
 // import { sum } from "./test.js";
 
 // console.log(sum());
+
+// npm i[package name]
+// yarn add [package name]
+
+import { printInfo, countTotal } from "./test.js";
+import q from "./test.js";
+
+console.log(printInfo(10));
+console.log(q);
