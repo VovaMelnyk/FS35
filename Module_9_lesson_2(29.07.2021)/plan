@@ -10,3 +10,128 @@
     Fonts and inline svg
     Styles
     Development
+
+Steps
+
+mkdir webpack-tutorial
+cd webpack-tutorial
+npm init -y # creates a default package.json
+
+ install webpack and webpack-cli
+
+ create src folder and index js file
+
+ create webpack.config.js in root project
+
+const path = require("path");
+
+module.exports = {
+  entry: {
+    main: path.resolve(__dirname, "./src/index.js"),
+  },
+};
+
+ output: {
+      path: path.resolve(__dirname, "./dist"),
+      filename: '[name].bundle.js'
+  },
+
+ "scripts": {
+  "build": "webpack"
+}
+
+npm i -D html-webpack-plugin
+create index html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+configure html plugin 
+new HtmlWebpackPlugin({
+      title: "Webpack builder",
+      template: path.resolve(__dirname, "./src/template.html"),
+      filename: "index.html",
+    }),
+
+check
+
+npm i clean-webpack-plugin
+configure clean
+
+new CleanWebpackPlugin()
+
+check
+
+modules and loaders
+
+Babel
+
+npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-env @babel/plugin-proposal-class-properties
+
+module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
+      },
+    ],
+  },
+
+  create .babelrc
+  {
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-proposal-class-properties"]
+}
+
+check
+Images
+
+{
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+      },
+
+svg
+{
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: 'asset/inline',
+      },
+
+
+check
+
+Styles
+
+npm i -D sass-loader postcss-loader css-loader style-loader postcss-preset-env node-sass
+post css config
+
+{
+        test: /\.(scss|css)$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+      },
+
+npm i -D webpack-dev-server
+
+mode: "development",
+  devServer: {
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, "./dist"),
+    open: true,
+    compress: true,
+    hot: true,
+    port: 8080,
+  },
+
+plugin
+      new webpack.HotModuleReplacementPlugin(),
+
+
+"start": "webpack serve"
