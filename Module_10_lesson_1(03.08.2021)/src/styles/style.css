@@ -23,7 +23,7 @@ ul li {
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
-  
+
   /* make the list items unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -50,7 +50,7 @@ ul li.checked {
 
 /* Add a "checked" mark when clicked on */
 ul li.checked::before {
-  content: '';
+  content: "";
   position: absolute;
   border-color: #fff;
   border-style: solid;
@@ -118,4 +118,8 @@ input {
 
 .addBtn:hover {
   background-color: #bbb;
+}
+
+.title {
+  color: #f44336;
 }
