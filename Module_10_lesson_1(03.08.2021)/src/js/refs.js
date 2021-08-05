@@ -3,4 +3,5 @@ export default {
   list: document.querySelector("#list"),
   input: document.querySelector("#input"),
   root: document.querySelector("#root"),
+  ul: document.querySelector("ul"),
 };
