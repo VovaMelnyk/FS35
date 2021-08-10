@@ -1,0 +1,138 @@
+/* resets and general styles */
+* {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+::-moz-selection {
+  color: #ffffff;
+  background: #ff5722;
+}
+::selection {
+  color: #ffffff;
+  background: #ff5722;
+}
+body {
+  font: normal 16px "Roboto", sans-serif;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+div.wrapper {
+  width: calc(4 * 225px);
+  margin: 0 auto;
+}
+span,
+a,
+strong {
+  font-weight: 700;
+}
+a {
+  transition: 0.2s;
+  text-decoration: none;
+  color: #787878;
+  border-bottom: 1px solid #607d8b;
+}
+a:hover {
+  transition: 0.2s;
+  color: #ff5722;
+}
+/* page layout */
+/* header */
+header {
+  width: 100%;
+  height: 60%;
+  background: #607d8b;
+}
+/* section */
+/* /* section{
+    width: 100%;
+    height: 50%;
+} */
+section h1,
+section p.meta {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+section hgroup {
+  margin-top: -360px;
+}
+section p.numbers {
+  font-size: 6em;
+}
+section p.meta,
+section p.strings {
+  font-size: 1.5em;
+}
+section h1 {
+  font-size: 4.5em;
+}
+
+/* countdown styles */
+div#countdown {
+  color: #353535;
+}
+div#countdown p {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+p.numbers {
+  width: 100%;
+  height: 85%;
+  background: #ffffff;
+  margin-top: -25px;
+  padding-top: 100px;
+}
+p.strings {
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+  background: #ff5722;
+  color: #ffffff;
+}
+div.cd-box {
+  width: 210px;
+  height: 360px;
+  background: #ffffff;
+  float: left;
+  padding: 25px 0 0 0;
+  margin: 30px 15px 0 0;
+  -webkit-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+  -moz-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+  box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 25px;
+  background: #ff5722;
+  color: #ffffff;
+  border: 1px solid #ff5722;
+}
+
+.btns-container {
+  text-align: center;
+}
+
+.modal {
+  background-color: #fff;
+  width: 300px;
+  height: 500px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  position: fixed;
+  bottom: -500px;
+  right: 0;
+  display: flex;
+}
+
+.chat {
+  margin: auto;
+}
+
+.modal_show {
+  bottom: 0;
+}

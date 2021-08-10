@@ -1,0 +1,7 @@
+ sync code
+ async code
+ setTimeout clearTimeout
+ setInterval clearInterval
+ timeout and interval delay
+ date (new Date() getDate, getMonth, getFullYear, getDay, getTime, getHours, getMinutes, getSeconds, getMileseconds)
+ Event loop
