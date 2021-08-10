@@ -1,3 +1,21 @@
+// console.log(new Date("December 17", "1995 03:24:00"));
+
+// Date.now() // 313442423443423423
+
+// for (let i = 3; i > 0; i--) {
+//   setTimeout(console.log(i), i * 1000);
+// }
+
+// setTimeout(console.log(i), 3000)
+// setTimeout(console.log(i), 2000);
+// setTimeout(console.log(i), 1000);
+
+// 012
+// 123
+// 333
+// error
+// const a = setTimeout(() => console.log(object), 1000) // 1
+
 // function addClasses() {
 //   const modal = document.querySelector(".modal");
 //   modal.classList.add("animate__bounce", "modal_show");
@@ -160,3 +178,97 @@
 
 // const watch = new Stopwatch();
 // watch.init();
+
+class StopWatch {
+  constructor() {
+    // this = {}
+    this.refs = {
+      start: document.querySelector("#start"),
+      stop: document.querySelector("#stop"),
+      sec: document.querySelector(".seconds"),
+      min: document.querySelector(".minutes"),
+    };
+    this.id = null;
+    this.startDate = null;
+
+    // this.timerStart = this.timerStart.bind(this);
+    // this.timerStop = this.timerStop.bind(this);
+
+    // this = {refs, id, startDate, timerStart, timerStop}
+  }
+
+  calc = () => {
+    const currentDate = Date.now();
+    const delta = (currentDate - this.startDate) / 1000;
+    const sec = Math.floor(delta % 60);
+    const min = Math.floor(delta / 60);
+    this.refs.sec.textContent = sec < 10 ? `0${sec}` : sec;
+    this.refs.min.textContent = min < 10 ? `0${min}` : min;
+  };
+
+  timerStart = () => {
+    this.startDate = Date.now();
+    this.id = setInterval(this.calc, 1000);
+  };
+
+  timerStop = () => {
+    clearInterval(this.id);
+  };
+
+  // init() {
+  //   this.refs.start.addEventListener("click", this.timerStart);
+  //   this.refs.stop.addEventListener("click", this.timerStop);
+  // }
+}
+
+const watch = new StopWatch();
+window.addEventListener("DOMContentLoaded", watch.timerStart);
+
+// watch.init();
+console.log(watch);
+
+// const refs = {
+//   start: document.querySelector("#start"),
+//   stop: document.querySelector("#stop"),
+//   sec: document.querySelector(".seconds"),
+//   min: document.querySelector(".minutes"),
+// };
+
+// function calc() {
+//   const currentDate = Date.now();
+//   const delta = (currentDate - startDate) / 1000;
+//   const sec = Math.floor(delta % 60);
+//   const min = Math.floor(delta / 60);
+//   refs.sec.textContent = sec < 10 ? `0${sec}` : sec;
+//   refs.min.textContent = min < 10 ? `0${min}` : min;
+// }
+
+// let id = null;
+// let startDate = null;
+
+// function timerStart() {
+//   startDate = Date.now();
+//   id = setInterval(calc, 1000);
+//   console.log(start);
+// }
+
+// function timerStop() {
+//   clearInterval(id);
+// }
+
+// refs.start.addEventListener("click", timerStart);
+// refs.stop.addEventListener("click", timerStop);
+
+// setInterval(() => {
+//   console.log("run");
+// }, 1000);
+
+// фиксировать дату старта
+// считаем сколько времени прошло от старта
+
+// 20:25:12
+// 20:25:13
+// 1
+// 220 sec 3m 40 sec
+console.log(220 % 60);
+console.log(Math.floor(220 / 60));
