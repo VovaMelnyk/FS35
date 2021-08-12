@@ -1,0 +1,12 @@
+1) Promise template
+2) Promise with timeout
+3) Promise without timeout
+4) chaining
+5) then
+6) catch
+7) Promise.all()
+8) Promise.race()
+9) Promise.allSettled
+10)Promise.resolve()
+11) Promise.reject()
+12) finally
