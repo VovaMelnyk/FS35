@@ -14,7 +14,16 @@
 
 <body>
 
-  <div id='root'></div>
+  <div id='root'>
+    <form id='form'>
+      <input type='text' id='search' name='coctailName'/>
+      <button type='submit'>Search</button>
+    </form>
+    <div class='container'></div>
+    <button id='more'>
+      Load more
+    </button>
+  </div>
 
   <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
   <script src="./index.js"></script>
