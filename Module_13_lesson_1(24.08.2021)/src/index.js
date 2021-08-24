@@ -1,36 +1,39 @@
 import refs from "./js/refs.js";
-import { submitHandler } from "./js/handlers.js";
+import { deleteHandler, submitHandler } from "./js/handlers.js";
 import "./styles/style.css";
-// import "../node_modules/basiclightbox/dist/basicLightbox.min.css";
 import { createLi } from "./js/templateStringHandler.js";
 import axios from "axios";
-// import * as basicLightbox from "basiclightbox";
+import * as basicLightbox from "basiclightbox";
+import "../node_modules/basiclightbox/dist/basiclightbox.min.css";
+import { getTasks } from "./helper/api.js";
 
 // let hiddenElement = document.getElementById("box");
 // let btn = document.querySelector(".btn");
 
 // function handleButtonClick() {
-//   hiddenElement.scrollIntoView({ block: "end", behavior: "smooth" });
+//   hiddenElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
 // }
 
-// btn.addEventListener("click", handleButtonClick);
+// function showEvent(event) {
+//   console.log(event.target.dataset.price);
+// }
+
+// btn.addEventListener("click", showEvent);
 
 // let x = 3;
-// const y = x++;
-
+// const y = x++;// x = 3
 // console.log(`x:${x}, y:${y}`);
 // // expected output: "x:4, y:3"
 
 // let a = 3;
-// const b = ++a;
+// const b = ++a; // a = 4
+// // a = 4
 
 // console.log(`a:${a}, b:${b}`);
-// // expected output: "a:4, b:4" поясніть будьласка Increment
+// expected output: "a:4, b:4" поясніть будьласка Increment
 
 // const container = document.querySelector(".container");
 // console.log(container.dataset);
-
-// event.target.dataset.source;
 
 // yarn add basiclightbox
 
@@ -44,6 +47,28 @@ import axios from "axios";
 // `);
 
 // instance.show();
+
+// let loader = false;
+
+// function getData() {
+//   loader = true;
+//   if (loader) {
+//     renderLoader();
+//   }
+//   fetch("http://localhost:7777/items")
+//     .then((data) => renderData(data))
+//     .finally(() => (loader = false));
+// }
+
+// function renderLoader() {
+//   const loaderEl = document.createElement("h1");
+//   loaderEl.textContent = "Загрузка";
+//   refs.root.appendChild(loaderEl);
+// }
+
+refs.form.addEventListener("submit", submitHandler);
+window.addEventListener("DOMContentLoaded", getTasks);
+refs.ul.addEventListener('click', deleteHandler)
 
 // fetch('http://localhost:7777/items', {
 //     method: 'POST',
