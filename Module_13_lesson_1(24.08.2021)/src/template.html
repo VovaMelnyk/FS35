@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <div id="header" class="header">
+        <h2 style="margin:5px">My Question List</h2>
+        <form id='form'>
+            <input type="text" id="input" placeholder="Title..." name='question'>
+            <button class="addBtn">Add</button>
+        </form>
+    </div>
+    <div id="root">
+        <ul>
+
+        </ul>
+    </div>
+</body>
+
+</html>
