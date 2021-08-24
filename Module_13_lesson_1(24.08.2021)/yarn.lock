@@ -1386,6 +1386,11 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+basiclightbox@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/basiclightbox/-/basiclightbox-5.0.4.tgz#5367d6d468ae44406e51b8486cfb8751f36f1fb2"
+  integrity sha512-EsuNWmfcFXWZOe0txKXsllYOC7bDpoaVLc4HHHlYKB/roymlZs+FBdLUU6rx2yPpnJZhulwheKdPjqr2k0+NGQ==
+
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"

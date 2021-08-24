@@ -123,3 +123,27 @@ input {
 .title {
   color: #f44336;
 }
+
+.big {
+  background: #ccc;
+  height: 300px;
+}
+
+.btn {
+  font-size: 14px;
+}
+
+.box {
+  background: lightgreen;
+  height: 100px;
+}
+
+.container {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 100px;
+}
