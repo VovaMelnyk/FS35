@@ -68,7 +68,7 @@ import { getTasks } from "./helper/api.js";
 
 refs.form.addEventListener("submit", submitHandler);
 window.addEventListener("DOMContentLoaded", getTasks);
-refs.ul.addEventListener('click', deleteHandler)
+refs.ul.addEventListener("click", deleteHandler);
 
 // fetch('http://localhost:7777/items', {
 //     method: 'POST',
@@ -105,3 +105,29 @@ refs.ul.addEventListener('click', deleteHandler)
 
 // axios.post('http://localhost:7777/items', {desc: 'rrrrrr'})
 // .then(res => console.log(res.data) )
+
+// axios("https://jsonplaceholder.typicode.com/users").then((data) =>
+//   console.log(data.data)
+// );
+
+// const test = async () => {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//   console.log(response);
+// };
+
+// test();
+
+const getUsers = () => {
+  return fetch("https://jsonplaceholder.typicode.com/users")
+    .then((result) => result.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+};
+// getUsers().then((data) => console.log(data));
+
+const getUsersAsync = async () => {
+  const result = await fetch("https://jsonplaceholder.typicode.com/users");
+  const todos = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const dataFromServer = await result.json();
+  console.log(dataFromServer);
+};
